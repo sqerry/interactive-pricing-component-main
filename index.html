@@ -5,35 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styling/resets.css">
+  <link rel="stylesheet" href="./styling/style.css">
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
   </style>
 </head>
 <body>
+  <main class="card-wrapper">
+    <header class="pricing-card-header">
+      <h2>Simple, traffic-based pricing</h2>
+      <p>Sign-up for our 30-day trial. No credit card required. </p>
+    </header>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <form action="" class="pricing-card">
+      <span class="pricing-card__views">100k PAGEVIEWS</span>
+      <input class="pricing-card__views-range" type="range" name="range" id="range" min="1" max="5" value="3" step="1">
 
-  Pageviews
-  $ /month
+      <div class="pricing-card__price-container">
+        <span class="pricing-card__price">$16.00</span>
+        <span class="pricing-card__billing-frequency">/ month</span>
+      </div>
+      <label for="billing-freq" class="pricing-card__billing-frequency-toggle">
+        <span class="pricing-card__freq-option pricing-card__freq-option--monthly">Monthly billing</span>
+        <input type="checkbox" name="billing-freq" id="billing-freq">
+        <div class="toggle">
+          <span class="toggle-circle"></span>
+        </div>
+        <span class="pricing-card__freq-option pricing-card__freq-option--annual">Yearly billing</span>
+      </label>
+      <div class="pricing-card__bottom">
+        <div class="pricing-card__features">
+          <span class="pricing-card__feature">
+            <img src="./images/icon-check.svg" alt="">
+            <span>Unlimited websites</span>
+          </span>
+          <span class="pricing-card__feature">
+            <img src="./images/icon-check.svg" alt="">
+            <span>100% data ownership</span>
+          </span>
+          <span class="pricing-card__feature">
+            <img src="./images/icon-check.svg" alt="">
+            <span>Email reports</span>
+          </span>
+        </div>
+        <button type= "submit" class="pricing-card__submit-btn">
+          Start my trial
+        </button>
+      </div>
+    </form>
+  </main>
 
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
